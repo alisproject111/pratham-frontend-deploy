@@ -86,11 +86,7 @@ const statusStyles = `
   @media (max-width: 375px) { .ps-status-card { padding: 12px; width: 98%; } .ps-status-title { font-size: 18px; } .ps-status-message { font-size: 14px; } .ps-order-details h3 { font-size: 15px; } .ps-home-button, .ps-retry-button, .ps-download-button { padding: 10px 16px; font-size: 14px; } }
   @media print { .ps-receipt-modal-header, .ps-receipt-modal-footer, .ps-action-buttons, .ps-status-icon, .ps-status-title, .ps-status-message, .ps-receipt-info, .ps-print-button { display: none !important; } .ps-receipt-modal { position: absolute; background: none; } .ps-receipt-modal-content { box-shadow: none; max-height: none; } .ps-receipt-modal-body { padding: 0; } }
 `
-import AnimatedElement from "../components/AnimatedElement"
-import Toast from "../components/Toast"
-import ReceiptTemplate from "../components/ReceiptTemplate"
-import { apiEndpoints } from "../config/api"
-import SEOHead from "../components/SEOHead"
+
 
 // Dynamic script loader helper for html2pdf.js
 const loadHtml2Pdf = () => {
