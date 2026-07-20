@@ -123,10 +123,7 @@ const paymentStyles = `
   @media (max-width: 576px) { .pp-payment-header { padding: 30px 0; } .pp-page-title { font-size: 1.6rem; } .pp-page-subtitle { font-size: 0.85rem; } .pp-summary-details, .pp-customer-details { padding: 15px; } .pp-summary-item { font-size: 0.85rem; padding-bottom: 12px; margin-bottom: 12px; } .pp-summary-item.pp-total .pp-summary-label, .pp-summary-item.pp-total .pp-summary-value { font-size: 1.1rem; } .pp-secure-payment-info { padding: 12px; font-size: 0.85rem; flex-direction: column; text-align: center; gap: 8px; } .pp-secure-payment-info i { font-size: 1.6rem; } .pp-cashfree-logo-img { height: 60px; width: 60px; } .pp-cashfree-logo span { font-size: 1.1rem; } .pp-payment-icon i { width: 40px; height: 40px; font-size: 1.2rem; } }
   @media (max-width: 375px) { .pp-payment-container { margin: 15px 0; } .pp-summary-details, .pp-customer-details, .pp-payment-form-container { padding: 12px; } .pp-cashfree-logo-img { height: 50px; width: 50px; } .pp-cashfree-logo span { font-size: 1rem; } .pp-payment-icons { gap: 10px; } .pp-payment-icon i { width: 36px; height: 36px; font-size: 1.05rem; } .pp-payment-icon span { font-size: 0.75rem; } }
 `
-import AnimatedElement from "../components/AnimatedElement"
-import Toast from "../components/Toast"
-import { apiEndpoints } from "../config/api"
-import SEOHead from "../components/SEOHead"
+
 
 function PaymentPage() {
   const { id } = useParams()
