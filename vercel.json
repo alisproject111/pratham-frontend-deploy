@@ -12,7 +12,7 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "https://tripeasy-server.vercel.app",
-    "VITE_API_URL": "https://tripeasy-server.vercel.app"
+    "REACT_APP_API_URL": "https://pratham-tours-backend.vercel.app",
+    "VITE_API_URL": "https://pratham-tours-backend.vercel.app"
   }
 }
