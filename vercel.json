@@ -11,8 +11,10 @@
       "destination": "/index.html"
     }
   ],
-  "env": {
-    "REACT_APP_API_URL": "https://pratham-tours-backend.vercel.app",
-    "VITE_API_URL": "https://pratham-tours-backend.vercel.app"
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://pratham-tours-backend.vercel.app",
+      "VITE_API_URL": "https://pratham-tours-backend.vercel.app"
+    }
   }
 }
