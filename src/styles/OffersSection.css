@@ -1,0 +1,288 @@
+.offers-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+/* Override default container width to make the banner wider */
+.offers-section .container {
+  max-width: 1440px; 
+}
+
+.special-banner-wrapper {
+  display: flex;
+  background-color: #fffaf5;
+  border-radius: 12px;
+  border: 1px solid #f3e5d8;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  min-height: 260px; /* Reduced from 320px to make it shorter */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.special-banner-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+/* Faint background pattern using CSS gradients */
+.special-banner-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(#e6d5c3 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.special-banner-content {
+  flex: 0 0 58%;
+  padding: 20px 30px; /* Reduced padding */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-heading {
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.banner-heading h2 {
+  font-size: 1.8rem; /* Reduced from 2.2rem */
+  color: #333;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.text-red {
+  color: #b22222;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.banner-heading p {
+  font-size: 1.05rem; /* Reduced from 1.2rem */
+  color: #555;
+  margin: 0;
+}
+
+.underline-red {
+  font-weight: 700;
+  border-bottom: 2px solid #b22222;
+  padding-bottom: 2px;
+  color: #333;
+}
+
+.banner-cards-scroll {
+  display: flex;
+  gap: 20px; /* Reduced gap */
+  overflow-x: auto;
+  padding-bottom: 10px; /* Reduced padding */
+  scrollbar-width: thin;
+  scrollbar-color: #f3e5d8 transparent;
+}
+
+.banner-cards-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.banner-cards-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.banner-cards-scroll::-webkit-scrollbar-thumb {
+  background-color: #f3e5d8;
+  border-radius: 10px;
+}
+
+.banner-card {
+  flex: 1; /* Automatically stretch to fill the empty space */
+  min-width: 140px;
+  max-width: 190px; /* Prevent them from getting too huge */
+  background: #ffffff;
+  border: 1px solid #f3e5d8;
+  border-radius: 8px;
+  padding: 16px 14px; /* Reduced padding for a smaller look */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.banner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.banner-card.active {
+  flex: 1.2; 
+  max-width: 220px;
+  background: #fdf0df; /* Flat beige color matching reference */
+  border-color: #fdf0df; 
+  box-shadow: none;
+}
+
+.card-days {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  height: 35px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-starting {
+  font-size: 0.75rem;
+  color: #777;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+
+.card-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.card-know-more-btn {
+  margin-top: auto; /* Push the button to the absolute bottom of the card */
+  background: transparent;
+  border: 1.5px solid #b22222;
+  color: #b22222;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.card-know-more-btn:hover {
+  background: #b22222;
+  color: white;
+}
+
+.card-know-more-btn i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.card-know-more-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Image Section */
+.special-banner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+  border-top-left-radius: 180px 250px;
+  border-bottom-left-radius: 180px 250px;
+  border-left: 8px solid #ecd1b8;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.special-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1024px) {
+  .special-banner-wrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .special-banner-content {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 25px;
+    background: #fffaf5;
+  }
+  .special-banner-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 0;
+    border-left: none;
+    border-top: 6px solid #ecd1b8;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-heading h2 {
+    font-size: 1.5rem;
+  }
+  .banner-heading p {
+    font-size: 0.95rem;
+  }
+  .banner-cards-scroll {
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 15px;
+    padding-bottom: 0;
+  }
+  .banner-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .banner-card.active {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .special-banner-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .special-banner-content {
+    padding: 20px 15px;
+  }
+  .banner-heading h2 {
+    font-size: 1.3rem;
+  }
+  .banner-heading p {
+    font-size: 0.85rem;
+  }
+  .banner-cards-scroll {
+    gap: 12px;
+  }
+  .banner-card {
+    padding: 15px;
+  }
+  .card-title {
+    font-size: 1rem;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .card-price {
+    font-size: 1.2rem;
+  }
+  .special-banner-image {
+    height: 200px;
+  }
+}

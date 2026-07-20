@@ -1,0 +1,420 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Top Contact Info Bar --- */
+.footer-top-bar {
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  padding: 30px 0;
+  margin-bottom: 0px; /* Removed gap as requested */
+  position: relative;
+  z-index: 2;
+}
+
+.footer-top-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  align-items: start;
+  max-width: 1600px; /* Stretch wider than standard container */
+  margin: 0 auto;
+  padding: 0 5%; /* Flexible padding on edges */
+}
+
+.top-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the entire block */
+  text-align: center;
+  gap: 6px;
+}
+
+.top-bar-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem; /* Slightly reduced */
+  white-space: nowrap; /* Force the header text into one line */
+}
+
+.top-bar-icon-text i {
+  font-size: 1.1rem;
+}
+
+.top-bar-link {
+  color: #111;
+  font-weight: 700;
+  font-size: 0.85rem; /* Slightly reduced so long emails fit */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 0px; /* Removed offset to allow perfect centering */
+  white-space: nowrap; /* Force single line */
+}
+
+.top-bar-link:hover {
+  color: #f37121;
+}
+
+.top-bar-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+  margin-left: 0px; /* Removed offset to allow perfect centering */
+}
+
+.top-social-link {
+  width: 32px;
+  height: 32px;
+  background-color: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.top-social-link:hover {
+  background-color: #f37121;
+  transform: translateY(-3px);
+}
+
+/* --- Main Footer --- */
+.footer-container {
+  padding-top: 60px;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #f37121;
+}
+
+.footer-section p {
+  color: #ccc;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #f37121;
+  transform: translateY(-3px);
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #ccc;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icon {
+  color: #f37121;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #f37121;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: #ccc;
+}
+
+.contact-info a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info a:hover {
+  color: #f37121;
+}
+
+.contact-info i {
+  color: #f37121;
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+/* Remove animations from footer */
+.footer-section {
+  overflow: visible;
+}
+
+.footer-section>div {
+  animation: none;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  background-color: #111;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Updated footer bottom container with flex layout */
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  color: #bbb;
+  margin: 0;
+}
+
+/* Add styles for policy links in footer */
+.footer-policies {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-policy-link {
+  color: #bbb;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-policy-link:not(:last-child) {
+  border-right: 1px solid #444;
+  padding-right: 15px;
+}
+
+.footer-policy-link:hover {
+  color: #f37121;
+}
+
+@media (max-width: 992px) {
+  .footer-top-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .top-bar-item {
+    align-items: center;
+    text-align: center;
+    width: 45%;
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar-item {
+    width: 100%;
+  }
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-links a,
+  .contact-info a,
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    padding: 15px 0;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+
+  /* Stack footer bottom elements on mobile */
+  .footer-bottom-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-policies {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-policy-link {
+    font-size: 0.85rem;
+  }
+  
+  .footer-policy-link:not(:last-child) {
+    padding-right: 12px;
+  }
+}
+
+/* Update the footer policy links for better mobile display */
+@media (max-width: 576px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-policies {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* Reduce general text & title sizes in footer */
+  .footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-section p,
+  .footer-links a,
+  .contact-info a,
+  .contact-info p {
+    font-size: 0.8rem;
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  /* Make the policy links even smaller */
+  .footer-policy-link {
+    font-size: 0.75rem;
+  }
+
+  .footer-policy-link:not(:last-child) {
+    padding-right: 8px;
+  }
+
+  /* Reduce copyright text size */
+  .footer-copyright {
+    font-size: 0.75rem !important;
+  }
+}
+
+/* For extremely small screens, make the footer bottom stack vertically */
+@media (max-width: 380px) {
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-policies {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* Extra compact text scaling */
+  .footer-section h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p,
+  .footer-links a,
+  .contact-info a,
+  .contact-info p {
+    font-size: 0.75rem;
+  }
+
+  .footer-policy-link {
+    font-size: 0.7rem;
+  }
+
+  .footer-policy-link:not(:last-child) {
+    padding-right: 6px;
+  }
+
+  .footer-copyright {
+    font-size: 0.75rem !important;
+  }
+}

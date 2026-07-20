@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Disallow private areas
+Disallow: /private/
+Disallow: /api/
+Disallow: /booking/*/payment
+Disallow: /payment-status
+
+# Allow important pages
+Allow: /packages
+Allow: /package/*
+Allow: /about
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://tripeasy.in/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

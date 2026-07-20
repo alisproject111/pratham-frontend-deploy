@@ -1,0 +1,272 @@
+.popular-destinations {
+  padding: 80px 0;
+  background-color: #fdfdfd;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 100%),
+    url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.destination-section {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.destination-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Using global section-title and section-subtitle from index.css - removed local overrides */
+
+.destination-section-title {
+  font-size: 1.3rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.destination-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #f37121;
+}
+
+.destinations-scroll-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Center the scroll buttons vertically */
+.scroll-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: none;
+  padding: 0 10px;
+}
+
+.scroll-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+  pointer-events: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 50%;
+  /* Ensure vertical centering */
+  transform: translateY(-50%);
+  /* Ensure vertical centering */
+}
+
+.scroll-button:hover:not(.disabled) {
+  background-color: #f37121;
+  color: white;
+  border-color: #f37121;
+}
+
+.scroll-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #ccc;
+}
+
+.destinations-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  width: 100%;
+  max-width: 100%; /* Spans full container width */
+  margin: 0 auto;
+  min-height: 300px;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+  scroll-snap-type: x proximity;
+  /* Improve scroll experience */
+  touch-action: pan-x;
+  /* Optimize for horizontal touch scrolling */
+  user-select: none;
+  /* Prevent text selection during scroll */
+}
+
+/* Add scroll snap alignment to destination cards */
+.destinations-scroll>* {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.destinations-scroll::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+@media (max-width: 1200px) {
+  .popular-destinations {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .destinations-scroll {
+    max-width: 100%;
+    min-height: 280px;
+  }
+
+  .destination-section-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .popular-destinations {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+  }
+
+  .destinations-scroll {
+    max-width: 100%;
+    min-height: 260px;
+  }
+
+  .scroll-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .destination-section-title {
+    font-size: 1.1rem;
+  }
+
+  .destination-section {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-destinations {
+    padding: 30px 0;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+  }
+
+  .destination-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .destination-section-title {
+    font-size: 1rem;
+  }
+
+  .destinations-scroll {
+    max-width: 100%;
+    min-height: 240px;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .destination-section {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .popular-destinations {
+    padding: 25px 0;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+  }
+
+  .destinations-scroll {
+    max-width: 100%;
+    min-height: 220px;
+    gap: 12px;
+  }
+
+  .scroll-button {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .destination-section-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .destinations-scroll {
+    max-width: 100%;
+    min-height: 200px;
+  }
+
+  .scroll-button {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
+  }
+}

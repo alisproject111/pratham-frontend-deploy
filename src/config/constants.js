@@ -1,0 +1,5 @@
+export const CONTACT_INFO = {
+  WHATSAPP_NUMBER: "919687061413", // E.164 format without '+' for WhatsApp links
+  PHONE_NUMBER: "+919687061413",
+  SECONDARY_PHONE_NUMBER: "+918928289283",
+};
